@@ -31,7 +31,7 @@ app.use(express.static(path.join(process.cwd(), 'client', 'build')));
 
 // Catch-all route: For any route not handled by the API, send back index.html.
 app.get('*', (req, res) => {
-  res.sendFile(path.join(process.cwd(), 'client', 'build', 'index.html'));
+  res.sendFile(path.join(process.cwd(), 'client', 'dist', 'index.html'));
 });
 
 const startServer = async () => {
